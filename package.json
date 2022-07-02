@@ -1,0 +1,16 @@
+{
+  "name": "enough-v1.1.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./styles/input.css -o ./styles/main.css",
+    "watch": "tailwindcss -i ./styles/input.css -o ./styles/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.0"
+  }
+}

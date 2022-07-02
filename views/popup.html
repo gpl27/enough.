@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+    <body>
+        <div class="w-96 flex flex-col divide-y">
+            <!-- Header -->
+            <div class="h-fit flex space-x-6 items-end p-3">
+                <h1 class="text-3xl">enough.</h1>
+                <h1 class="text-xl text-gray-700">Settings</h1>
+            </div>
+            <!-- Switches -->
+            <div class="h-fit flex flex-col p-3 space-y-3">
+
+                <label class="flex items-center cursor-pointer">
+                    <input name="blockHome" id="blockHome" class="switch sr-only peer" type="checkbox" />
+                    <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                    bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                    after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                    peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                    Block Home Page Recommendations
+                </label>
+
+                <label class="flex items-center cursor-pointer">
+                    <input name="blockRelated" id="blockRelated" class="switch sr-only peer" type="checkbox" />
+                    <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                    bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                    after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                    peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                    Block related content on videos
+                </label>
+
+                <label class="flex items-center cursor-pointer">
+                    <input name="trackUsage" id="trackUsage" class="switch sr-only peer" type="checkbox" />
+                    <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                    bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                    after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                    peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                    Track time spent on YouTube
+                </label>
+
+                <label class="flex items-center cursor-pointer">
+                    <input name="showUsageOnHome" id="showUsageOnHome" class="switch sr-only peer" type="checkbox" />
+                    <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                    bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                    after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                    peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                    Show Usage Report on Home Page
+                </label>
+            </div>
+            <!-- Advise to reload pages -->
+            <div id="advice" class="p-3 text-center">
+                <p>Please refresh any YouTube tabs for changes to take effect</p>
+            </div>
+            <!-- Buttons -->
+            <div class="p-3 flex flex-col space-y-3 items-center">
+                <button class="w-full px-6 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600" id="usage">Usage Report</button>
+                <button class="w-full px-6 py-2 rounded-md bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:hover:bg-red-500"id="clear" type="button">Clear Data</button>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../scripts/storage.js"></script>
+        <script src="../scripts/popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>YT Usage Report</title>
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+    
+    <body>
+      <div class="w-screen h-screen flex flex-col justify-between items-center divide-y">
+        <div class="w-full">
+          <!-- Header -->
+          <div class="w-full flex space-x-6 items-end px-6 py-3">
+            <h1 class="text-5xl">enough.</h1>
+            <h1 class="text-3xl text-gray-800">Usage Report</h1>
+          </div>
+
+          <div class="w-full flex flex-col justify-between items-center">
+          <!-- Radio Buttons -->
+            <div class="w-full">
+              <div class="h-fit px-6 py-3 flex">
+                <div>
+                  <input class="radio-btn sr-only peer" type="radio" id="all-time" name="span" value="0">
+                  <label class="px-6 py-2 border-2 border-blue-600 rounded-l-md text-blue-600 peer-checked:bg-blue-600 peer-checked:text-white" for="all-time">All Time</label>
+                </div>
+
+                <div>
+                  <input class="radio-btn sr-only peer" type="radio" id="30-days" name="span" value="30">
+                  <label class="px-6 py-2 border-y-2 border-blue-600 text-blue-600 peer-checked:bg-blue-600 peer-checked:text-white" for="30-days">30 Days</label>
+                </div>
+
+                <div>
+                  <input class="radio-btn sr-only peer" type="radio" id="7-days" name="span" value="7" checked>
+                  <label class="px-6 py-2 border-2 border-blue-600 rounded-r-md text-blue-600 peer-checked:bg-blue-600 peer-checked:text-white" for="7-days">7 Days</label>
+                </div>
+              </div>
+            </div>
+          <!-- Graph -->
+            <div class="relative w-3/4">
+              <canvas id="reportUsage" aria-label="YouTube Usage Report (Chart)"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="w-full p-2 text-xs">
+          <p>If you like the extension please consider leaving a review at <a class="text-blue-800" href="https://addons.mozilla.org/en-US/firefox/addon/enough/">AMO</a>!</p>
+        </div>
+
+      </div>
+      
+      <!-- Scripts -->
+      <script src="../scripts/storage.js"></script>
+      <script src="../scripts/chart.js"></script>
+      <script src="../scripts/charter.js"></script>
+      <script src="../scripts/usage.js"></script>
+    </body>
+</html>

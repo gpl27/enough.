@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+    <body>
+        <!-- Fixed Height Page -->
+        <div class="relative min-h-screen flex flex-col justify-between divide-y">
+            <div class="flex flex-col divide-y">
+                <!-- Header -->
+                <div class="h-fit flex space-x-6 items-end p-6">
+                    <h1 class="text-5xl">enough.</h1>
+                    <h1 class="text-2xl text-gray-700">Settings</h1>
+                </div>
+                
+                <!-- Switches -->
+                <div class="h-fit flex flex-col p-6 space-y-6">
+                    <label class="flex items-center cursor-pointer">
+                        <input name="blockHome" id="blockHome" class="switch sr-only peer" type="checkbox" />
+                        <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                        bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                        after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                        peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                        Block Home Page Recommendations
+                    </label>
+
+                    <label class="flex items-center cursor-pointer">
+                        <input name="blockRelated" id="blockRelated" class="switch sr-only peer" type="checkbox" />
+                        <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                        bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                        after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                        peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                        Block related content on videos
+                    </label>
+
+                    <label class="flex items-center cursor-pointer">
+                        <input name="trackUsage" id="trackUsage" class="switch sr-only peer" type="checkbox" />
+                        <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                        bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                        after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                        peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                        Track time spent on YouTube
+                    </label>
+
+                    <label class="flex items-center cursor-pointer">
+                        <input name="showUsageOnHome" id="showUsageOnHome" class="switch sr-only peer" type="checkbox" />
+                        <span class="w-8 h-5 mr-4 flex items-center flex-shrink-0 p-0.5 
+                        bg-gray-300 rounded-full after:w-4 after:h-4 after:bg-white
+                        after:rounded-full peer-checked:bg-blue-500 after:duration-300
+                        peer-checked:after:translate-x-3 peer-disabled:opacity-50"></span>
+                        Show Usage Report on Home Page
+                    </label>
+                </div>
+
+                <!-- Advise to reload pages -->
+                <div id="advice" class="p-3">
+                    <p>Please refresh any YouTube tabs for changes to take effect</p>
+                </div>
+                <!-- Buttons -->
+                <div class="w-full h-fit">
+                    <div class="w-96 p-3 flex justify-around items-center">
+                        <button class="w-40 px-6 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600" id="usage">Usage Report</button>
+                        <button class="w-40 px-6 py-2 rounded-md bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:hover:bg-red-500"id="clear" type="button">Clear Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-6">
+              <p>If you like the extension please consider leaving a review at <a class="text-blue-800" href="https://addons.mozilla.org/en-US/firefox/addon/enough/">AMO</a>!</p>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../scripts/storage.js"></script>
+        <script src="../scripts/popup.js"></script>
+    </body>
+</html>
